@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Wrapper Test</title>
+</head>
+<body>
+
+<div id="albums"></div>
+
+<script src="../dist/spotify-wrapper.umd.js"></script>
+
+<script>
+  const spotify = new SpotifyWrapper({
+    token: 'BQDeMKqa9MntKob49XhpkpDBiot41CXqyRIgITyDgRmOVoMeH7235Sc3TCkyQZtlM2tmt5makTykvpkfn-iGMxqAzqTns1DpdD8FR4hLf14IVxk4a00WKPS2hi4CbSTTkk2F9gq-7hTx5h395iJtuRaVENa59LC58A'
+  })
+
+  const albums = spotify.search.albums('Charlie brown jr');
+  const albumsEl = document.getElementById('albums');
+
+  albums
+    .then(data => {
+      markup = data.albums.items.map(item =>
+        `<img src='${item.images[0].url}' alt='${item.name}' />`
+      ).join('');
+
+      albumsEl.innerHTML = markup;
+    })
+</script>
+</body>
+</html>
