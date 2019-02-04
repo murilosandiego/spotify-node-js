@@ -3,7 +3,7 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import SpotifyWrapper from '../src/index';
+import Spotify from '../src/index';
 
 global.fetch = require('node-fetch');
 
@@ -14,7 +14,7 @@ describe('Search', () => {
   let fetchedStub;
 
   beforeEach(() => {
-    spotify = new SpotifyWrapper({
+    spotify = new Spotify({
       token: 'foo',
     });
 

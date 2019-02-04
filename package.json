@@ -1,14 +1,14 @@
 {
-  "name": "spotify-wrapper-js",
+  "name": "spotify-node-js",
   "version": "1.0.0",
   "description": "A wrapper to work the Spotify Web API",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib",
     "build": "npm run clear && babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
-    "build:umd": "webpack --output-filename spotify-wrapper.umd.js",
-    "build:umd:min": "webpack --output-filename spotify-wrapper.umd.min.js -p",
+    "build:umd": "webpack --output-filename spotify-node-js.umd.js",
+    "build:umd:min": "webpack --output-filename spotify-node-js.umd.min.js -p",
     "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "eslint src/*.js",
     "test": "mocha tests/**/*.spec.js --require @babel/register",
@@ -16,6 +16,10 @@
     "test:coverage": "nyc npm test -- --exit",
     "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "nyc": {
     "functions": 80,
     "lines": 80,
@@ -40,9 +44,9 @@
   "author": "Murilo Sandiego <contato@murilosandiego.com.br> (http://murilosandiego.com.br/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/murilosandiego/spotify-wrapper-js/issues"
+    "url": "https://github.com/murilosandiego/spotify-node-js/issues"
   },
-  "homepage": "https://github.com/murilosandiego/spotify-wrapper-js#readme",
+  "homepage": "https://github.com/murilosandiego/spotify-node-js#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",

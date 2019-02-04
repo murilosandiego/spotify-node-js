@@ -4,20 +4,20 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import SpotifyWrapper from '../src/index';
+import Spotify from '../src/index';
 
 global.fetch = require('node-fetch');
 
 chai.use(sinonChai);
 
-describe('SpotifyWrapper Library', () => {
-  it('should create on instace of SpotifyWrapper', () => {
-    const spotify = new SpotifyWrapper({});
-    expect(spotify).to.be.an.instanceof(SpotifyWrapper);
+describe('Spotify Library', () => {
+  it('should create on instace of Spotify', () => {
+    const spotify = new Spotify({});
+    expect(spotify).to.be.an.instanceof(Spotify);
   });
 
   it('should receive apiURL as on option', () => {
-    const spotify = new SpotifyWrapper({
+    const spotify = new Spotify({
       apiURL: 'foo',
     });
 
@@ -25,12 +25,12 @@ describe('SpotifyWrapper Library', () => {
   });
 
   it('should use the default apiURL ir not provided', () => {
-    const spotify = new SpotifyWrapper({});
+    const spotify = new Spotify({});
     expect(spotify.apiURL).to.be.equal('https://api.spotify.com/v1');
   });
 
   it('should receive token as on option', () => {
-    const spotify = new SpotifyWrapper({
+    const spotify = new Spotify({
       token: 'bar',
     });
 
@@ -51,19 +51,19 @@ describe('SpotifyWrapper Library', () => {
     });
 
     it('should have request method', () => {
-      const spotify = new SpotifyWrapper({});
+      const spotify = new Spotify({});
       expect(spotify.request).to.exist;
       expect(spotify.request).to.be.a('function');
     });
 
     it('should call fetch when request', () => {
-      const spotify = new SpotifyWrapper({});
+      const spotify = new Spotify({});
       spotify.request();
       expect(fetchedStub).to.have.been.calledOnce;
     });
 
     it('should call fetch with right url passed', () => {
-      const spotify = new SpotifyWrapper({
+      const spotify = new Spotify({
         token: 'bar',
       });
 
@@ -72,7 +72,7 @@ describe('SpotifyWrapper Library', () => {
     });
 
     it('should call fetch with right headers passed', () => {
-      const spotify = new SpotifyWrapper({
+      const spotify = new Spotify({
         token: 'bar',
       });
 

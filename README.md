@@ -1,7 +1,7 @@
-# Spotify Wrapper
+# Spotify NODE JS
 
-[![Build Status](https://travis-ci.org/murilosandiego/spotify-wrapper-js.svg?branch=master)](https://travis-ci.org/murilosandiego/spotify-wrapper-js)
-[![Coverage Status](https://coveralls.io/repos/github/murilosandiego/spotify-wrapper-js/badge.svg?branch=master)](https://coveralls.io/github/murilosandiego/spotify-wrapper-js?branch=master)
+[![Build Status](https://travis-ci.org/murilosandiego/spotify-node-js.svg?branch=master)](https://travis-ci.org/murilosandiego/spotify-node-js)
+[![Coverage Status](https://coveralls.io/repos/github/murilosandiego/spotify-node-js/badge.svg?branch=master)](https://coveralls.io/github/murilosandiego/spotify-node-js?branch=master)
 [![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 
 
@@ -22,7 +22,7 @@ This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests
 ## Installation
 
 ```sh
-$ npm install spotify-wrapper-js --save
+$ npm install spotify-node-js --save
 ```
 
 ## How to use
@@ -31,9 +31,9 @@ $ npm install spotify-wrapper-js --save
 
 ```js
 // to import a specific method
-import SpotifyWrapper from 'spotify-wrapper-js';
+import Spotify from 'spotify-node-js';
 
-const spotify = new SpotifyWrapper({
+const spotify = new Spotify({
   token: 'YOUR_TOKEN_HERE'
 });
 
@@ -44,9 +44,9 @@ spotify.search.artists('Incubus');
 ### CommonJS
 
 ```js
-const SpotifyWrapper = require('spotify-wrapper-js').default;
+const Spotify = require('spotify-node-js').default;
 
-const spotify = new SpotifyWrapper({
+const spotify = new Spotify({
   token: 'YOUR_TOKEN_HERE'
 });
 ```
@@ -55,17 +55,17 @@ const spotify = new SpotifyWrapper({
 
 ```html
 <!-- to import non-minified version -->
-<script src="spotify-wrapper-js.umd.js"></script>
+<script src="spotify-node-js.umd.js"></script>
 
 <!-- to import minified version -->
-<script src="spotify-wrapper-js.umd.min.js"></script>
+<script src="spotify-node-js.umd.min.js"></script>
 ```
 
-After that the library will be available to the Global as `SpotifyWrapper`. Follow an example:
+After that the library will be available to the Global as `Spotify`. Follow an example:
 
 ```js
 
-const spotify = new SpotifyWrapper({
+const spotify = new Spotify({
   token: 'YOUR_TOKEN_HERE'
 });
 
@@ -228,7 +228,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 |:---------------------:|
 |  [Murilo Sandiego](https://github.com/murilosandiego/)   |
 
-See also the list of [contributors](https://github.com/murilosandiego/spotify-wrapper-js/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/murilosandiego/spotify-node-js/contributors) who participated in this project.
 
 ## License
 

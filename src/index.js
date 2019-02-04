@@ -5,7 +5,7 @@ import album from './album';
 import API_URL from './config';
 import toJSON from './utils';
 
-export default class SpotifyWrapper {
+export default class Spotify {
   constructor(options) {
     this.apiURL = options.apiURL || API_URL;
     this.token = options.token;
