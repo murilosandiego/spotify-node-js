@@ -13,7 +13,8 @@
     "lint": "eslint src/*.js",
     "test": "mocha tests/**/*.spec.js --require @babel/register",
     "test:tdd": "mocha tests/**/*.spec.js --require @babel/register --watch",
-    "test:coverage": "nyc npm test -- --exit"
+    "test:coverage": "nyc npm test -- --exit",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls"
   },
   "nyc": {
     "functions": 80,
@@ -50,6 +51,7 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.12.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.15.0",
