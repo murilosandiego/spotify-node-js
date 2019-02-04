@@ -1,6 +1,9 @@
 # Spotify Wrapper
 
-[![Build Status](https://travis-ci.org/murilosandiego/eventex-wttd.svg?branch=master)](https://travis-ci.org/murilosandiego/eventex-wttd)(https://coveralls.io/repos/github/murilosandiego/spotify-wrapper-js/badge.svg?branch=master)](https://coveralls.io/github/murilosandiego/spotify-wrapper-js?branch=master)
+[![Build Status](https://travis-ci.org/murilosandiego/spotify-wrapper-js.svg?branch=master)](https://travis-ci.org/murilosandiego/spotify-wrapper-js)
+[![Coverage Status](https://coveralls.io/repos/github/murilosandiego/spotify-wrapper-js/badge.svg?branch=master)](https://coveralls.io/github/murilosandiego/spotify-wrapper-js?branch=master)
+[![Code Style](https://badgen.net/badge/code%20style/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
+
 
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
 
