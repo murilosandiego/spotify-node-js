@@ -8,14 +8,14 @@
 
 <div id="albums"></div>
 
-<script src="../dist/spotify-wrapper.umd.js"></script>
+<script src="../dist/spotify-node-js.umd.js"></script>
 
 <script>
-  const spotify = new SpotifyWrapper({
-    token: 'BQDeMKqa9MntKob49XhpkpDBiot41CXqyRIgITyDgRmOVoMeH7235Sc3TCkyQZtlM2tmt5makTykvpkfn-iGMxqAzqTns1DpdD8FR4hLf14IVxk4a00WKPS2hi4CbSTTkk2F9gq-7hTx5h395iJtuRaVENa59LC58A'
+  const spotify = new Spotify({
+    token: 'BQBmERA0lqXbujE2O5LHIlNyX6A76CtJgdU37iEsD231_C7W3F0kAeWOafz-lmKFwVESXTE5WuDIw2yEi9I0l2os1E4wgHowAcuhCg3MtUbFtCWH0t9GUCAOKkqD8jr4XB0zWN9cj5A5awbaBpI9hqIhqLPqYlAfIQ'
   })
 
-  const albums = spotify.search.albums('Charlie brown jr');
+  const albums = spotify.search.albums('Anitta');
   const albumsEl = document.getElementById('albums');
 
   albums

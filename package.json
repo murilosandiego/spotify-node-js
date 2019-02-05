@@ -1,6 +1,6 @@
 {
   "name": "spotify-node-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wrapper to work the Spotify Web API",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murilosandiego/spotify-wrapper-js.git"
+    "url": "git+https://github.com/murilosandiego/spotify-node-js.git"
   },
   "keywords": [
     "js",
